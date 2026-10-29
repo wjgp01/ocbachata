@@ -67,7 +67,7 @@ export function Hero() {
             <div className="absolute -inset-5 -z-10 rounded-[2rem] bg-[radial-gradient(closest-side,rgb(255_122_31/0.55),transparent)] blur-2xl" />
             <Image
               src={flyer}
-              alt="OC Bachata Weekender flyer with Jonny & Sami, Angel & Luna, DJ Zoukchatero and DJ Jassy, November 21–22, 2026 at Dance Precision in Anaheim"
+              alt="OC Bachata Weekender flyer with Jonny & Sami, Angel & Luna, DJ Zoukchatero and DJ Jassy, November 21–22, 2026 at Dance Precisions Dance Studio in Anaheim"
               placeholder="blur"
               loading="eager"
               fetchPriority="high"

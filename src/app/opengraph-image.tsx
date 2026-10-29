@@ -4,7 +4,7 @@ import { cacheLife } from "next/cache";
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "OC Bachata Weekender with Angel & Luna and Jonny & Sami — November 21–22, 2026 at Dance Precision in Anaheim, California";
+  "OC Bachata Weekender with Angel & Luna and Jonny & Sami — November 21–22, 2026 at Dance Precisions Dance Studio in Anaheim, California";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -62,7 +62,7 @@ export default async function OpengraphImage() {
           </div>
           <div style={{ marginTop: 36, fontSize: 34 }}>Angel & Luna · Jonny & Sami</div>
           <div style={{ marginTop: 8, fontSize: 26, color: "rgba(255, 244, 232, 0.75)" }}>
-            Dance Precision · Anaheim, California
+            Dance Precisions Dance Studio · Anaheim, California
           </div>
         </div>
         <img

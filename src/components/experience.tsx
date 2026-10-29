@@ -86,7 +86,7 @@ export function Experience() {
             alt="DJ Zoukchatero and DJ Jassy"
             eyebrow="Saturday Night Social"
             title={"DJ Jassy & DJ Zoukchatero"}
-            text="On the decks Saturday night at Dance Precision."
+            text="On the decks Saturday night at Dance Precisions Dance Studio."
             className="md:row-span-2"
           />
           <StatCard
