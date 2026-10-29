@@ -33,7 +33,7 @@ export function MobileTicketBar() {
       <div className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-night-900/90 p-2 pl-4 shadow-2xl backdrop-blur-xl">
         <div className="min-w-0 leading-tight">
           <p className="truncate font-display text-xl font-black uppercase italic">OC Bachata Weekender</p>
-          <p className="text-xs text-sand/60">Nov 21–22 · Anaheim &amp; Costa Mesa</p>
+          <p className="text-xs text-sand/60">Nov 21–22 · Dance Precision, Anaheim</p>
         </div>
         <a href="#tickets" className="btn btn-primary shrink-0 px-5 py-3 text-sm">
           Get tickets

@@ -44,7 +44,7 @@ export function Hero() {
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="size-4 text-sun" />
-              {event.locations}
+              <span className="text-balance">{event.location}</span>
             </li>
           </ul>
 

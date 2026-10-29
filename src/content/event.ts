@@ -5,10 +5,12 @@ export const event = {
   name: "OC Bachata Weekender",
   tagline: "Grand Opening of OC Bachata",
   description:
-    "The grand opening of OC Bachata: a weekend of world-class Bachata training and social dancing with Angel & Luna from Spain and Jonny & Sami. November 21–22, 2026 in Anaheim & Costa Mesa, California.",
+    "The grand opening of OC Bachata: a weekend of world-class Bachata training and social dancing with Angel & Luna from Spain and Jonny & Sami. November 21–22, 2026 at Dance Precision in Anaheim, California.",
   dates: "November 21–22, 2026",
   shortDates: "Nov 21–22, 2026",
-  locations: "Anaheim & Costa Mesa, California",
+  // Matches the flyer: the weekend is based at Dance Precision in Anaheim.
+  location: "Dance Precision, 5468 E La Palma Ave, Anaheim, CA 92807",
+  city: "Anaheim, California",
   collaboration: "Baychata Dance Academy",
   // Saturday workshops kick off at 7:00 PM Pacific; drives the countdown and search data.
   startsAt: "2026-11-21T19:00:00-08:00",

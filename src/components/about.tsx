@@ -5,7 +5,7 @@ import { event } from "@/content/event";
 
 const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; value: string }[] = [
   { icon: Calendar, label: "Dates", value: event.dates },
-  { icon: MapPin, label: "Locations", value: event.locations },
+  { icon: MapPin, label: "Location", value: event.location },
   { icon: Users, label: "In collaboration with", value: event.collaboration },
 ];
 

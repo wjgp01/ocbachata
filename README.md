@@ -1,6 +1,6 @@
 # OC Bachata Weekender
 
-Event site for the **OC Bachata Weekender** (November 21–22, 2026, Anaheim & Costa Mesa), a modern rebuild of the
+Event site for the **OC Bachata Weekender** (November 21–22, 2026, Dance Precision in Anaheim, California), a modern rebuild of the
 [original event page](https://www.baychatasensual.com/oc-bachata-weekender-angel-luna/) on baychatasensual.com.
 
 Built with Next.js 16, React 19 and Tailwind CSS 4, and deployed on Vercel.

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "@/assets/images/baychata-sensual-logo.png";
 import { Facebook, Instagram, YouTube } from "@/components/icons";
-import { footerLinks, legalLinks, links } from "@/content/event";
+import { event, footerLinks, legalLinks, links } from "@/content/event";
 
 const socials = [
   { label: "Instagram", href: links.instagram, icon: Instagram },
@@ -74,7 +74,7 @@ export function SiteFooter() {
       <div className="border-t border-white/5">
         <div className="wrap flex flex-col gap-2 py-6 pb-28 text-xs text-sand/50 sm:flex-row sm:justify-between md:pb-6">
           <p>© 2026 Baychata Sensual. All rights reserved.</p>
-          <p>OC Bachata Weekender · Nov 21–22, 2026 · Anaheim &amp; Costa Mesa</p>
+          <p>OC Bachata Weekender · Nov 21–22, 2026 · {event.city}</p>
         </div>
       </div>
     </footer>
