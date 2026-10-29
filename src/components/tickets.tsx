@@ -1,5 +1,6 @@
 import { ArrowUpRight, Check } from "@/components/icons";
 import { GomryCheckout } from "@/components/gomry-checkout";
+import { PresaleNotice } from "@/components/presale-notice";
 import { SectionHeading } from "@/components/section-heading";
 import { fullPass, passes, tickets } from "@/content/event";
 
@@ -8,7 +9,10 @@ export function Tickets() {
     <section id="tickets" className="py-20 sm:py-28">
       <div className="wrap">
         <SectionHeading eyebrow="Passes" title="Secure your spot">
-          Pre-sale passes are on now. Pick your pass and check out securely right here.
+          <PresaleNotice fallback="Pick your pass and check out securely right here.">
+            <strong className="text-sun">Pre-sale ends {tickets.presaleEnds}.</strong> Pick your pass and check out
+            securely right here.
+          </PresaleNotice>
         </SectionHeading>
 
         {/* On phones the checkout sits right under the Full Pass; on desktop it gets its own column. */}
@@ -28,7 +32,9 @@ export function Tickets() {
               <p className="sm:text-right">
                 <span className="font-display text-7xl font-black italic leading-none">${fullPass.price}</span>
                 <span className="mt-1 block text-xs font-bold uppercase tracking-[0.2em] text-sand/70">
-                  {fullPass.label}
+                  <PresaleNotice fallback={fullPass.label}>
+                    {fullPass.label} · ends {tickets.presaleEndsShort}
+                  </PresaleNotice>
                 </span>
               </p>
             </div>

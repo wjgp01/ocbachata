@@ -21,6 +21,10 @@ export const tickets = {
   // Gomry event behind the embedded checkout widget.
   gomryEventId: "SYiIdo96vO736jG11W0h",
   url: "https://www.gomry.com/event/OC-Bachata-Weekender-Nov-21-22-SYiIdo96vO736jG11W0h",
+  // Pre-sale messaging hides itself once this moment passes (end of day Pacific time).
+  presaleEndsAt: "2026-10-31T23:59:59-07:00",
+  presaleEnds: "October 31, 2026",
+  presaleEndsShort: "Oct 31",
 };
 
 export const venues = [

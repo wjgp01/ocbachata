@@ -1,8 +1,9 @@
 import Image from "next/image";
 import flyer from "@/assets/images/oc-bachata-weekender-flyer.jpg";
 import { Countdown } from "@/components/countdown";
-import { ArrowRight, Calendar, Download, MapPin, Play, Sparkle } from "@/components/icons";
-import { event } from "@/content/event";
+import { ArrowRight, Calendar, Clock, Download, MapPin, Play, Sparkle } from "@/components/icons";
+import { PresaleNotice } from "@/components/presale-notice";
+import { event, tickets } from "@/content/event";
 
 export function Hero() {
   return (
@@ -59,7 +60,14 @@ export function Hero() {
             </a>
           </div>
 
-          <Countdown className="mt-11" startsAt={event.startsAt} endsAt={event.endsAt} />
+          <PresaleNotice>
+            <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-sun/15 px-3.5 py-1.5 text-sm font-bold text-sun ring-1 ring-sun/30">
+              <Clock className="size-4" />
+              Pre-sale ends {tickets.presaleEnds}
+            </p>
+          </PresaleNotice>
+
+          <Countdown className="mt-9" startsAt={event.startsAt} endsAt={event.endsAt} />
         </div>
 
         <div className="lg:col-span-5">
