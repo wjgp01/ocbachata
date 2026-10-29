@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useSyncExternalStore } from "react";
-import { Close, Menu, SunMark } from "@/components/icons";
+import logo from "@/assets/images/oc-bachata-logo.png";
+import { Close, Menu } from "@/components/icons";
 
 const nav = [
   { href: "#experience", label: "Experience" },
@@ -37,12 +39,14 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="wrap flex h-16 items-center justify-between gap-4 lg:h-20">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="OC Bachata Weekender, back to top">
-          <SunMark className="size-9" />
-          <span className="font-display text-2xl font-black uppercase italic leading-[0.8] tracking-wide">
-            OC Bachata
-            <span className="block text-[0.6rem] not-italic tracking-[0.42em] text-sun">Weekender</span>
-          </span>
+        <a href="#top" className="shrink-0">
+          <Image
+            src={logo}
+            alt="OC Bachata Weekender"
+            loading="eager"
+            sizes="112px"
+            className="h-11 w-auto lg:h-14"
+          />
         </a>
 
         <nav aria-label="Primary" className="hidden md:block">

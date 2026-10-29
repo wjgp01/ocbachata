@@ -137,25 +137,3 @@ export function YouTube(props: IconProps) {
     </Icon>
   );
 }
-
-// Striped sunset disc used as the event mark.
-export function SunMark(props: IconProps) {
-  return (
-    <svg viewBox="0 0 48 48" aria-hidden="true" {...props}>
-      <defs>
-        <linearGradient id="sunmark-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#fff1b8" />
-          <stop offset="0.45" stopColor="#ffb238" />
-          <stop offset="1" stopColor="#ef2a17" />
-        </linearGradient>
-        <clipPath id="sunmark-clip">
-          <circle cx="24" cy="24" r="20" />
-        </clipPath>
-      </defs>
-      <g clipPath="url(#sunmark-clip)">
-        <rect x="4" y="4" width="40" height="40" fill="url(#sunmark-fill)" />
-        <path d="M4 27.5h40M4 33.5h40M4 39.5h40" stroke="#07040d" strokeWidth="2.75" />
-      </g>
-    </svg>
-  );
-}
