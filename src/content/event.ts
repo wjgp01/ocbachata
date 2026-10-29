@@ -5,11 +5,11 @@ export const event = {
   name: "OC Bachata Weekender",
   tagline: "Grand Opening of OC Bachata",
   description:
-    "The grand opening of OC Bachata: a weekend of world-class Bachata training and social dancing with Angel & Luna from Spain and Jonny & Sami. November 21–22, 2026 at Dance Precisions Dance Studio in Anaheim, California.",
+    "The grand opening of OC Bachata: a weekend of world-class Bachata training and social dancing with Angel & Luna from Spain and Jonny & Sami. November 21–22, 2026 at Dance Precision’s Dance Studio in Anaheim, California.",
   dates: "November 21–22, 2026",
   shortDates: "Nov 21–22, 2026",
-  // Matches the flyer: the weekend is based at Dance Precisions Dance Studio in Anaheim.
-  location: "Dance Precisions Dance Studio, 5468 E La Palma Ave, Anaheim, CA 92807",
+  // Studio name as the organizer spells it (the flyer has a typo); the weekend is based here.
+  location: "Dance Precision’s Dance Studio, 5468 E La Palma Ave, Anaheim, CA 92807",
   city: "Anaheim, California",
   collaboration: "Baychata Dance Academy",
   // Saturday workshops kick off at 7:00 PM Pacific; drives the countdown and search data.
@@ -29,11 +29,11 @@ export const tickets = {
 
 export const venues = [
   {
-    name: "Dance Precisions Dance Studio",
+    name: "Dance Precision’s Dance Studio",
     role: "Main venue",
     address: { street: "5468 E La Palma Ave", city: "Anaheim", state: "CA", zip: "92807" },
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Dance+Precisions+Dance+Studio%2C+5468+E+La+Palma+Ave%2C+Anaheim%2C+CA+92807",
+      "https://www.google.com/maps/search/?api=1&query=Dance+Precision%27s+Dance+Studio%2C+5468+E+La+Palma+Ave%2C+Anaheim%2C+CA+92807",
   },
   {
     name: "Sevilla",
@@ -53,13 +53,13 @@ export const schedule = [
         time: "7:00 – 9:00 PM",
         title: "Intensive Workshops",
         detail: "Two hours of focused training",
-        venue: "Dance Precisions Dance Studio, Anaheim",
+        venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
         time: "9:00 PM – 1:00 AM",
         title: "Saturday Night Social",
         detail: "Featuring DJ Jassy & DJ Zoukchatero",
-        venue: "Dance Precisions Dance Studio, Anaheim",
+        venue: "Dance Precision’s Dance Studio, Anaheim",
       },
     ],
   },
@@ -71,7 +71,7 @@ export const schedule = [
         time: "2:00 – 6:30 PM",
         title: "Masterclass & Lead Styling",
         detail: "3-hour masterclass with Angel & Luna, plus Angel’s 90-minute Lead Styling with Recording",
-        venue: "Dance Precisions Dance Studio, Anaheim",
+        venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
         time: "Afterwards",
@@ -95,7 +95,7 @@ export const fullPass = {
     },
     {
       title: "Saturday Night Social",
-      detail: "at Dance Precisions Dance Studio, featuring DJ Jassy and DJ Zoukchatero",
+      detail: "at Dance Precision’s Dance Studio, featuring DJ Jassy and DJ Zoukchatero",
     },
     {
       title: "Sunday Night Social",
