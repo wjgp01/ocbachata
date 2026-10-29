@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night-950: #07040d;
+  --color-night-900: #0e0718;
+  --color-night-800: #180c25;
+  --color-sand: #fff4e8;
+  --color-sun: #ffb238;
+  --color-flame: #ff7a1f;
+  --color-ember: #ff4d1f;
+  --color-brand: #dc1c13;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-sofia), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sofia-xc), var(--font-sofia), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-night-950);
+    color: var(--color-sand);
+  }
+
+  ::selection {
+    background-color: var(--color-ember);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sun);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Plain component classes (not @utility) so Tailwind utilities can always override them. */
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (width >= 40rem) {
+    .wrap {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  @media (width >= 64rem) {
+    .wrap {
+      padding-inline: 2rem;
+    }
+  }
+
+  .glass {
+    background-color: rgb(255 255 255 / 0.045);
+    border: 1px solid rgb(255 255 255 / 0.1);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  .text-gradient-sunset {
+    background-image: linear-gradient(180deg, #fff6e6 0%, #ffd27a 34%, #ff8a2a 68%, #ff3d1f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.875rem 1.5rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    transition:
+      transform 0.2s ease,
+      filter 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-image: linear-gradient(90deg, var(--color-flame), var(--color-ember) 45%, var(--color-brand));
+    box-shadow:
+      0 12px 40px -12px rgb(255 77 31 / 0.75),
+      inset 0 1px 0 rgb(255 255 255 / 0.25);
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    color: var(--color-sand);
+    background-color: rgb(255 255 255 / 0.08);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.16);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .btn-ghost:hover {
+    background-color: rgb(255 255 255 / 0.14);
+  }
+
+  /* Sunset sky, striped sun and sea behind the hero and closing call to action. */
+  .sunset-sky {
+    background:
+      radial-gradient(60% 45% at 78% 84%, rgb(255 150 60 / 0.45), transparent 70%),
+      radial-gradient(45% 35% at 8% 12%, rgb(140 30 120 / 0.25), transparent 70%),
+      linear-gradient(
+        180deg,
+        #07040d 0%,
+        #120822 26%,
+        #2d0c35 48%,
+        #6e1233 66%,
+        #b8261f 82%,
+        #f0661c 94%,
+        #ffa23a 100%
+      );
+  }
+
+  .sunset-sun {
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #fff3c4 0%, #ffc54d 30%, #ff7a1f 60%, #e3261a 100%);
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      #000 0 52%,
+      transparent 52% 55%,
+      #000 55% 62%,
+      transparent 62% 66%,
+      #000 66% 72%,
+      transparent 72% 77%,
+      #000 77% 83%,
+      transparent 83% 89%,
+      #000 89%
+    );
+    mask-image: linear-gradient(
+      180deg,
+      #000 0 52%,
+      transparent 52% 55%,
+      #000 55% 62%,
+      transparent 62% 66%,
+      #000 66% 72%,
+      transparent 72% 77%,
+      #000 77% 83%,
+      transparent 83% 89%,
+      #000 89%
+    );
+  }
+
+  .sunset-sea {
+    background:
+      repeating-linear-gradient(180deg, rgb(255 178 56 / 0.14) 0 2px, transparent 2px 13px),
+      linear-gradient(180deg, #3d0c2c 0%, #170a1f 55%, #07040d 100%);
+    box-shadow: 0 -1px 0 rgb(255 196 110 / 0.55);
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Sections ease in as they scroll into view, in browsers that support scroll-driven animations. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
