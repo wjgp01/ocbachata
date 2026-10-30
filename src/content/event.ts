@@ -108,7 +108,7 @@ export const fullPass = {
 export const passes = [
   {
     name: "SAT Intensive Pass",
-    price: 65,
+    price: 55,
     label: "Pre-sale",
     description: "2 HR workshops on Saturday + Saturday Night Social",
   },
