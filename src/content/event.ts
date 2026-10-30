@@ -86,7 +86,7 @@ export const schedule = [
 // Pre-sale prices as listed on Gomry. The checkout widget always shows live pricing.
 export const fullPass = {
   name: "Full Pass",
-  price: 175,
+  price: 155,
   label: "Pre-sale",
   includes: [
     {
