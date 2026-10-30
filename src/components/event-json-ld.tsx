@@ -1,5 +1,5 @@
 import flyer from "@/assets/images/oc-bachata-weekender-flyer.jpg";
-import { event, fullPass, links, passes, tickets, venues } from "@/content/event";
+import { event, fullPass, passes, tickets, venues } from "@/content/event";
 import { siteUrl } from "@/lib/site";
 
 // Structured data so search engines can show the event with dates, venues and prices.
@@ -30,7 +30,7 @@ export function EventJsonLd() {
       { "@type": "PerformingGroup", name: "Angel & Luna" },
       { "@type": "PerformingGroup", name: "Jonny & Sami" },
     ],
-    organizer: { "@type": "Organization", name: "Baychata Sensual", url: links.home },
+    organizer: { "@type": "Organization", name: "OC Bachata", url: siteUrl },
     offers: [fullPass, ...passes].map((pass) => ({
       "@type": "Offer",
       name: pass.name,

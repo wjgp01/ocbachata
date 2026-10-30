@@ -11,7 +11,7 @@ export const event = {
   // Studio name as the organizer spells it (the flyer has a typo); the weekend is based here.
   location: "Dance Precision’s Dance Studio, 5468 E La Palma Ave, Anaheim, CA 92807",
   city: "Anaheim, California",
-  collaboration: "Baychata Dance Academy",
+  featuring: "Angel & Luna, Jonny & Sami",
   // Saturday workshops kick off at 7:00 PM Pacific; drives the countdown and search data.
   startsAt: "2026-11-21T19:00:00-08:00",
   endsAt: "2026-11-22T23:59:00-08:00",
@@ -137,26 +137,12 @@ export const videos = [
   { id: "htHLC4M5Bq8", title: "Jonny & Sami", thumbnail: "jonny-and-sami" },
 ] as const;
 
-export const links = {
-  home: "https://www.baychatasensual.com/",
-  instagram: "https://www.instagram.com/baychatasensual/",
-  facebook: "https://www.facebook.com/baychata.org/",
-  facebookEvent: "https://www.facebook.com/events/187369957412603",
-  youtube: "https://www.youtube.com/@baychatasensual/featured",
-};
-
+// In-page links shown in the footer.
 export const footerLinks = [
-  { label: "Home", href: "https://www.baychatasensual.com/" },
-  { label: "Upcoming Events", href: "https://www.baychatasensual.com/#book-ticket" },
-  { label: "Artists", href: "https://www.baychatasensual.com/artists/" },
-  { label: "Team", href: "https://www.baychatasensual.com/our-team/" },
-  { label: "Gallery", href: "https://www.baychatasensual.com/gallery/" },
-  { label: "Academy", href: "https://www.baychatasensual.com/bachata-academy/" },
-  { label: "Merchandise", href: "https://www.baychatasensual.com/merchandise/" },
-  { label: "About Us", href: "https://www.baychatasensual.com/about-us/" },
-];
-
-export const legalLinks = [
-  { label: "Terms and Conditions", href: "https://www.baychatasensual.com/terms-and-conditions/" },
-  { label: "Refund Policy", href: "https://www.baychatasensual.com/refund-policy" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Schedule", href: "#schedule" },
+  { label: "Passes", href: "#tickets" },
+  { label: "Videos", href: "#videos" },
+  { label: "Back to top", href: "#top" },
 ];

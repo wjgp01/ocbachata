@@ -6,7 +6,7 @@ import { event } from "@/content/event";
 const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; value: string }[] = [
   { icon: Calendar, label: "Dates", value: event.dates },
   { icon: MapPin, label: "Location", value: event.location },
-  { icon: Users, label: "In collaboration with", value: event.collaboration },
+  { icon: Users, label: "Featuring", value: event.featuring },
 ];
 
 export function About() {
@@ -17,9 +17,8 @@ export function About() {
           <SectionHeading eyebrow="Welcome" title={event.tagline} />
           <div className="reveal mt-7 space-y-5 text-lg/relaxed text-pretty text-sand/75">
             <p>
-              Get ready for an unforgettable weekend of Bachata, world-class training, and social dancing! In
-              collaboration with <strong className="text-sand">Baychata Dance Academy</strong>, we’re bringing together
-              international artists <strong className="text-sand">Angel &amp; Luna from Spain</strong> and local
+              Get ready for an unforgettable weekend of Bachata, world-class training, and social dancing! We’re
+              bringing together international artists <strong className="text-sand">Angel &amp; Luna from Spain</strong> and local
               favorites <strong className="text-sand">Jonny &amp; Sami</strong> for an exciting weekend dedicated to
               learning, growing, and connecting through dance.
             </p>
