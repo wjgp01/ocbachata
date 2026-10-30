@@ -19,7 +19,7 @@ const title = "OC Bachata Weekender · Angel & Luna · Nov 21–22, 2026";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title,
+  title: { default: title, template: `%s · ${event.name}` },
   description: event.description,
   alternates: { canonical: "/" },
   openGraph: {

@@ -1,19 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "@/assets/images/oc-bachata-logo.png";
-import { event, footerLinks, venues } from "@/content/event";
+import { footerLinks, legalLinks, venues } from "@/content/event";
 
 export function SiteFooter() {
   return (
     <footer id="site-footer" className="border-t border-white/10 bg-night-950">
       <div className="wrap grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-5">
-          <a href="#top" className="inline-block" aria-label="OC Bachata Weekender, back to top">
-            <Image src={logo} alt="OC Bachata Weekender" className="h-20 w-auto" sizes="160px" />
-          </a>
+          <Link href="/" className="inline-block">
+            <Image src={logo} alt="OC Bachata Weekender home" className="h-20 w-auto" sizes="160px" />
+          </Link>
           <p className="mt-5 max-w-xs text-sand/70">Workshops · Socials · Top Artists · Great Vibes</p>
-          <a href="#tickets" className="btn btn-primary mt-6">
+          <Link href="/#tickets" className="btn btn-primary mt-6">
             Get your pass
-          </a>
+          </Link>
         </div>
 
         <nav aria-label="Footer" className="md:col-span-4">
@@ -21,9 +22,9 @@ export function SiteFooter() {
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sand/75">
             {footerLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="transition hover:text-sand">
+                <Link href={link.href} className="transition hover:text-sand">
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -52,9 +53,19 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="wrap flex flex-col gap-2 py-6 pb-28 text-xs text-sand/50 sm:flex-row sm:justify-between md:pb-6">
+        <div className="wrap flex flex-col gap-3 py-6 pb-28 text-xs text-sand/50 sm:flex-row sm:items-center sm:justify-between md:pb-6">
           <p>© 2026 OC Bachata. All rights reserved.</p>
-          <p>OC Bachata Weekender · Nov 21–22, 2026 · {event.city}</p>
+          <nav aria-label="Policies">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="transition hover:text-sand">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>

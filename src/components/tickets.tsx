@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUpRight, Check } from "@/components/icons";
 import { GomryCheckout } from "@/components/gomry-checkout";
 import { PresaleNotice } from "@/components/presale-notice";
@@ -66,6 +67,17 @@ export function Tickets() {
               <GomryCheckout eventId={tickets.gomryEventId} />
             </div>
             <p className="mt-4 text-center text-sm text-sand/60">
+              By buying a pass you agree to the{" "}
+              <Link href="/terms-and-conditions" className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun">
+                Terms and Conditions
+              </Link>{" "}
+              and{" "}
+              <Link href="/refund-policy" className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun">
+                Refund Policy
+              </Link>
+              .
+            </p>
+            <p className="mt-2 text-center text-sm text-sand/60">
               Checkout not loading?{" "}
               <a
                 href={tickets.url}

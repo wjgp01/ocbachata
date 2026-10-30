@@ -1,15 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useSyncExternalStore } from "react";
 import logo from "@/assets/images/oc-bachata-logo.png";
 import { Close, Menu } from "@/components/icons";
 
 const nav = [
-  { href: "#experience", label: "Experience" },
-  { href: "#schedule", label: "Schedule" },
-  { href: "#tickets", label: "Passes" },
-  { href: "#videos", label: "Videos" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#schedule", label: "Schedule" },
+  { href: "/#tickets", label: "Passes" },
+  { href: "/#videos", label: "Videos" },
 ];
 
 function subscribeToScroll(onChange: () => void) {
@@ -39,7 +40,7 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="wrap flex h-16 items-center justify-between gap-4 lg:h-20">
-        <a href="#top" className="shrink-0">
+        <Link href="/#top" className="shrink-0">
           <Image
             src={logo}
             alt="OC Bachata Weekender"
@@ -47,24 +48,24 @@ export function SiteHeader() {
             sizes="112px"
             className="h-11 w-auto lg:h-14"
           />
-        </a>
+        </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-8 text-sm font-semibold text-sand/80">
             {nav.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="transition hover:text-sun">
+                <Link href={item.href} className="transition hover:text-sun">
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="#tickets" className="btn btn-primary px-5 py-2.5 text-sm">
+          <Link href="/#tickets" className="btn btn-primary px-5 py-2.5 text-sm">
             Get tickets
-          </a>
+          </Link>
           <button
             type="button"
             className="grid size-10 place-items-center rounded-full text-sand ring-1 ring-white/15 md:hidden"
@@ -83,13 +84,13 @@ export function SiteHeader() {
           <ul className="wrap space-y-1 py-4">
             {nav.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
                   className="block rounded-2xl px-3 py-3 font-display text-3xl font-black uppercase italic hover:bg-white/5"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

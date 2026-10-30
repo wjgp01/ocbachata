@@ -9,6 +9,8 @@ Built with Next.js 16, React 19 and Tailwind CSS 4, and deployed on Vercel.
 Nearly everything on the page lives in [`src/content/event.ts`](src/content/event.ts): dates, schedule, venues,
 pass prices, videos and links. Edit it there and the whole page updates.
 
+- **Policies** are the Terms and Conditions and Refund Policy pages in `src/app/terms-and-conditions/` and
+  `src/app/refund-policy/`. The contact email they show is `contactEmail` in `src/content/event.ts`.
 - **Images** live in `src/assets/images/`. To swap one, replace the file and keep the same name.
 - **Tickets** are sold through the embedded Gomry checkout (`tickets.gomryEventId`), which always shows live prices.
   The prices on the pass cards are typed in by hand, so update them when Gomry pricing changes (for example, when

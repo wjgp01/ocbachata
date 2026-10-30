@@ -137,12 +137,19 @@ export const videos = [
   { id: "htHLC4M5Bq8", title: "Jonny & Sami", thumbnail: "jonny-and-sami" },
 ] as const;
 
-// In-page links shown in the footer.
+// Where pass holders write about transfers, cancellations and refunds.
+export const contactEmail = "infinito.dance@gmail.com";
+
 export const footerLinks = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Schedule", href: "#schedule" },
-  { label: "Passes", href: "#tickets" },
-  { label: "Videos", href: "#videos" },
-  { label: "Back to top", href: "#top" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Schedule", href: "/#schedule" },
+  { label: "Passes", href: "/#tickets" },
+  { label: "Videos", href: "/#videos" },
+];
+
+export const legalLinks = [
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
+  { label: "Refund Policy", href: "/refund-policy" },
 ];
