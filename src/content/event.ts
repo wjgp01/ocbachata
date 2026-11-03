@@ -24,7 +24,6 @@ export const tickets = {
   // Pre-sale messaging hides itself once this moment passes (end of day Pacific time).
   presaleEndsAt: "2026-10-31T23:59:59-07:00",
   presaleEnds: "October 31, 2026",
-  presaleEndsShort: "Oct 31",
 };
 
 export const venues = [
@@ -83,11 +82,11 @@ export const schedule = [
   },
 ];
 
-// Pre-sale prices as listed on Gomry. The checkout widget always shows live pricing.
+// Mirrors the Full Pass on Gomry, so update it whenever Gomry's price or tier changes.
 export const fullPass = {
   name: "Full Pass",
   price: 165,
-  label: "Pre-sale",
+  label: "Early-Bird",
   includes: [
     {
       title: "5 hours of training",
@@ -104,31 +103,6 @@ export const fullPass = {
   ],
   excludes: "Does not include the Lead Styling workshop, which is sold separately.",
 };
-
-export const passes = [
-  {
-    name: "SAT Intensive Pass",
-    price: 55,
-    label: "Pre-sale",
-    description: "2 HR workshops on Saturday + Saturday Night Social",
-  },
-  {
-    name: "SUN Masterclass",
-    price: 120,
-    description: "3-hour masterclass with Angel & Luna on Sunday",
-  },
-  {
-    name: "Lead Styling with Recording",
-    price: 80,
-    description: "Angel’s 90-minute lead styling session, recorded",
-  },
-  {
-    name: "SAT Social Pass",
-    price: 20,
-    label: "Pre-sale",
-    description: "Saturday Night Social only",
-  },
-];
 
 export const videos = [
   { id: "9VjQlGfrupk", title: "Lead Styling with Angel Garcia", thumbnail: "lead-styling-angel-garcia" },

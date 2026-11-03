@@ -1,5 +1,5 @@
 import flyer from "@/assets/images/oc-bachata-weekender-flyer.jpg";
-import { event, fullPass, passes, tickets, venues } from "@/content/event";
+import { event, fullPass, tickets, venues } from "@/content/event";
 import { siteUrl } from "@/lib/site";
 
 // Structured data so search engines can show the event with dates, venues and prices.
@@ -31,14 +31,14 @@ export function EventJsonLd() {
       { "@type": "PerformingGroup", name: "Jonny & Sami" },
     ],
     organizer: { "@type": "Organization", name: "OC Bachata", url: siteUrl },
-    offers: [fullPass, ...passes].map((pass) => ({
+    offers: {
       "@type": "Offer",
-      name: pass.name,
-      price: pass.price,
+      name: fullPass.name,
+      price: fullPass.price,
       priceCurrency: "USD",
       url: tickets.url,
       availability: "https://schema.org/InStock",
-    })),
+    },
   };
 
   return (

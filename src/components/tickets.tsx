@@ -3,7 +3,7 @@ import { ArrowUpRight, Check } from "@/components/icons";
 import { GomryCheckout } from "@/components/gomry-checkout";
 import { PresaleNotice } from "@/components/presale-notice";
 import { SectionHeading } from "@/components/section-heading";
-import { fullPass, passes, tickets } from "@/content/event";
+import { fullPass, tickets } from "@/content/event";
 
 export function Tickets() {
   return (
@@ -17,8 +17,8 @@ export function Tickets() {
         </SectionHeading>
 
         {/* On phones the checkout sits right under the Full Pass; on desktop it gets its own column. */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-8 lg:gap-y-4">
-          <article className="reveal relative overflow-hidden rounded-3xl bg-linear-to-br from-[#2b0f30] via-[#4f1030] to-[#8f1c1d] p-6 ring-1 ring-white/10 sm:p-8 lg:col-span-7">
+        <div className="mt-14 grid gap-6 lg:grid-cols-12 lg:gap-x-8">
+          <article className="reveal relative overflow-hidden rounded-3xl bg-linear-to-br from-[#2b0f30] via-[#4f1030] to-[#8f1c1d] p-6 ring-1 ring-white/10 sm:p-8 lg:col-span-7 lg:self-start">
             <div
               aria-hidden="true"
               className="absolute -right-24 -top-24 size-72 rounded-full bg-[radial-gradient(closest-side,rgb(255_178_56/0.45),transparent)]"
@@ -33,9 +33,7 @@ export function Tickets() {
               <p className="sm:text-right">
                 <span className="font-display text-7xl font-black italic leading-none">${fullPass.price}</span>
                 <span className="mt-1 block text-xs font-bold uppercase tracking-[0.2em] text-sand/70">
-                  <PresaleNotice fallback={fullPass.label}>
-                    {fullPass.label} · ends {tickets.presaleEndsShort}
-                  </PresaleNotice>
+                  {fullPass.label}
                 </span>
               </p>
             </div>
@@ -62,7 +60,7 @@ export function Tickets() {
             <p className="mt-5 text-sm text-sand/60">{fullPass.excludes}</p>
           </article>
 
-          <div className="lg:sticky lg:top-24 lg:col-span-5 lg:col-start-8 lg:row-span-2 lg:row-start-1 lg:self-start">
+          <div className="lg:sticky lg:top-24 lg:col-span-5 lg:col-start-8 lg:self-start">
             <div className="rounded-[1.75rem] bg-white p-2 text-night-950 shadow-[0_40px_100px_-40px_rgb(255_77_31/0.6)] ring-1 ring-white/20 sm:p-3">
               <GomryCheckout eventId={tickets.gomryEventId} />
             </div>
@@ -89,26 +87,6 @@ export function Tickets() {
                 <ArrowUpRight className="size-3.5" />
               </a>
             </p>
-          </div>
-
-          <div className="space-y-4 lg:col-span-7">
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {passes.map((pass) => (
-                <li key={pass.name} className="reveal glass flex flex-col rounded-3xl p-5">
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-lg font-bold leading-snug">{pass.name}</h3>
-                    <p className="font-display text-3xl font-black italic leading-none">${pass.price}</p>
-                  </div>
-                  <p className="mt-2 text-sm text-sand/70">{pass.description}</p>
-                  {pass.label ? (
-                    <p className="mt-auto pt-3 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-sun">
-                      {pass.label}
-                    </p>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-            <p className="text-sm text-sand/50">Prices in USD. Gomry adds a service fee at checkout.</p>
           </div>
         </div>
       </div>
