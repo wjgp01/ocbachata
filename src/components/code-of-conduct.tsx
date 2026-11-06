@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
-import { codeOfConduct, contactEmail, safetyReportUrl } from "@/content/event";
+import { codeOfConduct, contactEmail, lostAndFoundUrl, safetyReportUrl } from "@/content/event";
 
 export function CodeOfConduct() {
   return (
@@ -22,36 +22,42 @@ export function CodeOfConduct() {
               <p className="mt-2 text-sand/70">{rule.detail}</p>
             </li>
           ))}
-          {/* The help card spans a full row below the rules. */}
-          <li className="reveal rounded-3xl bg-linear-to-br from-[#2b0f30] via-[#4f1030] to-[#8f1c1d] p-6 ring-1 ring-white/10 sm:col-span-2 sm:p-8 lg:col-span-3">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-2xl">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sun">Need help?</p>
-                <h3 className="mt-4 text-xl font-bold leading-snug">Speak up</h3>
-                <p className="mt-2 text-sand/80">
-                  If something feels wrong, for you or someone else, tell an organizer right away, file a community
-                  safety report or email{" "}
-                  <a
-                    href={`mailto:${contactEmail}`}
-                    className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun"
-                  >
-                    {contactEmail}
-                  </a>
-                  . We take every report seriously.
-                </p>
-              </div>
-              <a
-                href={safetyReportUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary shrink-0 self-start lg:self-auto"
-              >
-                Community safety report
-                <ArrowUpRight className="size-5" />
-              </a>
-            </div>
-          </li>
         </ol>
+
+        <div className="mt-4 grid gap-4 lg:grid-cols-2">
+          <div className="reveal flex flex-col items-start rounded-3xl bg-linear-to-br from-[#2b0f30] via-[#4f1030] to-[#8f1c1d] p-6 ring-1 ring-white/10 sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sun">Need help?</p>
+            <h3 className="mt-4 text-xl font-bold leading-snug">Speak up</h3>
+            <p className="mt-2 mb-6 text-sand/80">
+              If something feels wrong, for you or someone else, tell an organizer right away, file a community safety
+              report or email{" "}
+              <a
+                href={`mailto:${contactEmail}`}
+                className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun"
+              >
+                {contactEmail}
+              </a>
+              . We take every report seriously.
+            </p>
+            <a href={safetyReportUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-auto">
+              Community safety report
+              <ArrowUpRight className="size-5" />
+            </a>
+          </div>
+
+          <div className="reveal glass flex flex-col items-start rounded-3xl p-6 sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-sun">Lost something?</p>
+            <h3 className="mt-4 text-xl font-bold leading-snug">Lost and found</h3>
+            <p className="mt-2 mb-6 text-sand/70">
+              We’re not responsible for lost or stolen valuables. However, if you lose something, fill out our lost and
+              found form and we’ll do our best to track it down.
+            </p>
+            <a href={lostAndFoundUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost mt-auto">
+              Lost and found form
+              <ArrowUpRight className="size-5" />
+            </a>
+          </div>
+        </div>
 
         <p className="mt-6 text-sm text-sand/60">
           Anyone who breaks this code may be removed from the event without a refund, as our{" "}

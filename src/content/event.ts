@@ -180,6 +180,9 @@ export const contactEmail = "ocbachata@gmail.com";
 export const safetyReportUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSfZYjn99q3EpS2EcPajvgsb-Fyb6x0hxkvdUW-zkpxw91vBYw/viewform";
 
+// Google Form for lost items, linked from the Code of Conduct section.
+export const lostAndFoundUrl = "https://forms.gle/DQyK3iaU2snFA9bk9";
+
 export const footerLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
