@@ -119,7 +119,8 @@ export function Experience() {
                   Angel Lead Styling with Recording
                 </h3>
                 <p className="mt-3 text-sand/80">
-                  Refine your movement, develop your style, and capture your progress.
+                  Refine your movement, develop your style, and capture your progress. Being in the recording is optional,
+                  so you can choose not to participate.
                 </p>
               </div>
               <p className="flex items-baseline gap-1.5 font-display font-black uppercase italic leading-none">

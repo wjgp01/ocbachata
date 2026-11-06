@@ -93,7 +93,8 @@ export const schedule = [
       {
         time: "5:30 – 7:00 PM",
         title: "Lead Styling (with recording)",
-        detail: "With Angel, sold separately",
+        detail:
+          "With Angel, sold separately. Being in the recording is optional, so you can choose not to participate.",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
