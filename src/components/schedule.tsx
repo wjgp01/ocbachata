@@ -19,6 +19,11 @@ export function Schedule() {
                 <h3 className="font-display text-5xl font-black uppercase italic leading-none">{day.day}</h3>
                 <p className="font-display text-2xl font-black uppercase italic text-sun">{day.date}</p>
               </header>
+              {day.theme ? (
+                <p className="mt-5 inline-flex rounded-full bg-sun/15 px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-sun">
+                  Theme: {day.theme}
+                </p>
+              ) : null}
               <ol className="mt-6 space-y-7 border-l border-white/15 pl-6">
                 {day.items.map((item) => (
                   <li key={item.title} className="relative">
@@ -28,11 +33,13 @@ export function Schedule() {
                     />
                     <p className="text-sm font-bold uppercase tracking-[0.15em] text-sun">{item.time}</p>
                     <p className="mt-1 text-2xl font-bold leading-tight">{item.title}</p>
-                    <p className="mt-1 text-sand/70">{item.detail}</p>
-                    <p className="mt-2 flex items-center gap-1.5 text-sm font-semibold text-sand/60">
-                      <MapPin className="size-3.5" />
-                      {item.venue}
-                    </p>
+                    {item.detail ? <p className="mt-1 text-sand/70">{item.detail}</p> : null}
+                    {item.venue ? (
+                      <p className="mt-2 flex items-center gap-1.5 text-sm font-semibold text-sand/60">
+                        <MapPin className="size-3.5" />
+                        {item.venue}
+                      </p>
+                    ) : null}
                   </li>
                 ))}
               </ol>

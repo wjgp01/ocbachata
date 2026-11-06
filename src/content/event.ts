@@ -14,7 +14,7 @@ export const event = {
   featuring: "Angel & Luna, Jonny & Sami",
   // Saturday workshops kick off at 7:00 PM Pacific; drives the countdown and search data.
   startsAt: "2026-11-21T19:00:00-08:00",
-  endsAt: "2026-11-22T23:59:00-08:00",
+  endsAt: "2026-11-22T23:00:00-08:00",
 };
 
 export const tickets = {
@@ -35,11 +35,11 @@ export const venues = [
       "https://www.google.com/maps/search/?api=1&query=Dance+Precision%27s+Dance+Studio%2C+5468+E+La+Palma+Ave%2C+Anaheim%2C+CA+92807",
   },
   {
-    name: "Sevilla",
+    name: "Cafe Sevilla",
     role: "Sunday Night Social",
     address: { street: "1870 Harbor Blvd", city: "Costa Mesa", state: "CA", zip: "92627" },
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Sevilla%2C+1870+Harbor+Blvd%2C+Costa+Mesa%2C+CA+92627",
+      "https://www.google.com/maps/search/?api=1&query=Cafe+Sevilla%2C+1870+Harbor+Blvd%2C+Costa+Mesa%2C+CA+92627",
   },
 ];
 
@@ -47,17 +47,24 @@ export const schedule = [
   {
     day: "Saturday",
     date: "Nov 21",
+    theme: "Fall colors",
     items: [
       {
-        time: "7:00 – 9:00 PM",
-        title: "Intensive Workshops",
-        detail: "Two hours of focused training",
+        time: "7:00 – 8:00 PM",
+        title: "Angel & Luna Workshop",
+        detail: "Bachata Sensual Partner Work Technique",
+        venue: "Dance Precision’s Dance Studio, Anaheim",
+      },
+      {
+        time: "8:00 – 9:00 PM",
+        title: "Jonny & Sami Workshop",
+        detail: "Partnered Footwork",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
         time: "9:00 PM – 1:00 AM",
         title: "Saturday Night Social",
-        detail: "Featuring DJ Jassy & DJ Zoukchatero",
+        detail: "Where Zoukchata used to be, featuring DJ Jassy & DJ Zoukchatero",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
     ],
@@ -67,16 +74,32 @@ export const schedule = [
     date: "Nov 22",
     items: [
       {
-        time: "2:00 – 6:30 PM",
-        title: "Masterclass & Lead Styling",
-        detail: "3-hour masterclass with Angel & Luna, plus Angel’s 90-minute Lead Styling with Recording",
+        time: "2:00 – 3:30 PM",
+        title: "Footwork & Musicality",
+        detail: "Masterclass with Angel & Luna",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
-        time: "Afterwards",
+        time: "3:30 – 4:00 PM",
+        title: "Break",
+      },
+      {
+        time: "4:00 – 5:30 PM",
+        title: "Trending Moves",
+        detail: "Masterclass with Angel & Luna",
+        venue: "Dance Precision’s Dance Studio, Anaheim",
+      },
+      {
+        time: "5:30 – 7:00 PM",
+        title: "Lead Styling (with recording)",
+        detail: "With Angel, sold separately",
+        venue: "Dance Precision’s Dance Studio, Anaheim",
+      },
+      {
+        time: "7:00 – 11:00 PM",
         title: "Sunday Night Social",
-        detail: "Dance the weekend out in Costa Mesa",
-        venue: "Sevilla, Costa Mesa",
+        detail: "$5 entrance fee covered for Full Pass holders",
+        venue: "Cafe Sevilla, Costa Mesa",
       },
     ],
   },
@@ -98,7 +121,7 @@ export const fullPass = {
     },
     {
       title: "Sunday Night Social",
-      detail: "at Sevilla Cafe in Costa Mesa",
+      detail: "at Cafe Sevilla in Costa Mesa",
     },
   ],
   excludes: "Does not include the Lead Styling workshop, which is sold separately.",
