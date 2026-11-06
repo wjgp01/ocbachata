@@ -52,7 +52,7 @@ export const schedule = [
       {
         time: "7:00 – 8:00 PM",
         title: "Angel & Luna Workshop",
-        detail: "Bachata Sensual Partner Work Technique",
+        detail: "Traditional Meets to Sensual",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
