@@ -140,7 +140,35 @@ export const videos = [
   { id: "htHLC4M5Bq8", title: "Jonny & Sami", thumbnail: "jonny-and-sami" },
 ] as const;
 
-// Where pass holders write about transfers, cancellations and refunds.
+// House rules for every class and social, shown in the Code of Conduct section.
+export const codeOfConduct = [
+  {
+    title: "Ask, and accept a no",
+    detail:
+      "Anyone can ask anyone to dance, and anyone can say no or end a dance at any time. Take a “no, thank you” gracefully, without asking why.",
+  },
+  {
+    title: "Let your partner set the closeness",
+    detail:
+      "Bachata sensual is close. Match your partner’s comfort level, and give them more space the moment they ask for it or seem unsure.",
+  },
+  {
+    title: "Keep the floor safe",
+    detail:
+      "Save lifts, drops and deep dips for partners who have agreed to them, and watch out for the couples around you.",
+  },
+  {
+    title: "No harassment, ever",
+    detail:
+      "No unwanted touching, comments or attention. Everyone is welcome, whatever their gender, race, sexuality, age, body or dance level.",
+  },
+  {
+    title: "Come fresh",
+    detail: "Shower, wear deodorant, keep mints handy and bring a spare shirt for the socials.",
+  },
+];
+
+// Where people write about transfers, cancellations, refunds and conduct concerns.
 export const contactEmail = "infinito.dance@gmail.com";
 
 export const footerLinks = [
@@ -150,6 +178,7 @@ export const footerLinks = [
   { label: "Schedule", href: "/#schedule" },
   { label: "Passes", href: "/#tickets" },
   { label: "Videos", href: "/#videos" },
+  { label: "Code of Conduct", href: "/#code-of-conduct" },
 ];
 
 export const legalLinks = [

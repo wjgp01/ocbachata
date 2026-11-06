@@ -1,5 +1,6 @@
 import { About } from "@/components/about";
 import { ClosingCta } from "@/components/closing-cta";
+import { CodeOfConduct } from "@/components/code-of-conduct";
 import { EventJsonLd } from "@/components/event-json-ld";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
@@ -23,6 +24,7 @@ export default function Home() {
         <Schedule />
         <Tickets />
         <Videos />
+        <CodeOfConduct />
         <ClosingCta />
       </main>
       <SiteFooter />
