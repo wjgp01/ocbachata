@@ -64,7 +64,8 @@ export const schedule = [
       {
         time: "9:00 PM – 1:00 AM",
         title: "Saturday Night Social",
-        detail: "Where Zoukchata used to be, featuring DJ Jassy & DJ Zoukchatero",
+        detail:
+          "Where Zoukchata used to be, featuring DJ Jassy & DJ Zoukchatero. Full Pass holders get priority dancing with the instructors.",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
     ],
@@ -122,6 +123,10 @@ export const fullPass = {
     {
       title: "Sunday Night Social",
       detail: "at Cafe Sevilla in Costa Mesa",
+    },
+    {
+      title: "Priority dancing",
+      detail: "with the instructors at the Saturday Night Social",
     },
   ],
   excludes: "Does not include the Lead Styling workshop, which is sold separately.",
