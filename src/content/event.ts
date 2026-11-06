@@ -166,10 +166,19 @@ export const codeOfConduct = [
     title: "Come fresh",
     detail: "Shower, wear deodorant, keep mints handy and bring a spare shirt for the socials.",
   },
+  {
+    title: "No alcohol allowed inside Dance Precision’s Dance Studio",
+    detail:
+      "This is a dance studio for kids. Don’t leave alcohol bottles or trash outside the studio, either. Cameras are monitoring, and anyone caught bringing alcohol inside will be removed without a refund.",
+  },
 ];
 
 // Where people write about transfers, cancellations, refunds and conduct concerns.
-export const contactEmail = "infinito.dance@gmail.com";
+export const contactEmail = "ocbachata@gmail.com";
+
+// Google Form for safety reports, linked from the Code of Conduct section.
+export const safetyReportUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfZYjn99q3EpS2EcPajvgsb-Fyb6x0hxkvdUW-zkpxw91vBYw/viewform";
 
 export const footerLinks = [
   { label: "Home", href: "/" },
