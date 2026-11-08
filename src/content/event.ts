@@ -142,6 +142,7 @@ export const videos = [
 // Artist Instagram profiles linked from the About section.
 export const instagram = {
   angel: "https://www.instagram.com/angel_garcia_bachata/",
+  luna: "https://www.instagram.com/rocioluna.dancer/",
   luisYAndrea: "https://www.instagram.com/luisyandreaoficial/",
 };
 

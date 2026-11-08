@@ -1,4 +1,4 @@
-import type { ComponentType, SVGProps } from "react";
+import type { ComponentType, ReactNode, SVGProps } from "react";
 import { Calendar, MapPin, Users } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
 import { event, instagram } from "@/content/event";
@@ -9,6 +9,20 @@ const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; valu
   { icon: Users, label: "Featuring", value: event.featuring },
 ];
 
+// Artist names link to their Instagram profiles in a new tab.
+function Profile({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline decoration-sun/60 underline-offset-4 transition hover:text-sun"
+    >
+      {children}
+    </a>
+  );
+}
+
 export function About() {
   return (
     <section id="about" className="py-20 sm:py-28">
@@ -18,26 +32,17 @@ export function About() {
           <div className="reveal mt-7 space-y-5 text-lg/relaxed text-pretty text-sand/75">
             <p>
               Get ready for an unforgettable weekend of Bachata, world-class training, and social dancing! We’re
-              bringing together international artists <strong className="text-sand">Angel &amp; Luna from Spain</strong> and local
-              favorites <strong className="text-sand">Jonny &amp; Sami</strong> for an exciting weekend dedicated to
-              learning, growing, and connecting through dance.{" "}
-              <a
-                href={instagram.angel}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun"
-              >
-                Angel Garcia
-              </a>{" "}
-              is the younger brother of Luis Garcia from{" "}
-              <a
-                href={instagram.luisYAndrea}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun"
-              >
-                Luis y Andrea
-              </a>
+              bringing together international artists{" "}
+              <strong className="text-sand">
+                <Profile href={instagram.angel}>Angel</Profile> &amp; <Profile href={instagram.luna}>Luna</Profile> from
+                Spain
+              </strong>{" "}
+              and local favorites <strong className="text-sand">Jonny &amp; Sami</strong> for an exciting weekend
+              dedicated to learning, growing, and connecting through dance. Angel Garcia is the younger brother of Luis
+              Garcia from{" "}
+              <strong className="text-sand">
+                <Profile href={instagram.luisYAndrea}>Luis y Andrea</Profile>
+              </strong>
               .
             </p>
             <p>
