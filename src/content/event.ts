@@ -93,8 +93,7 @@ export const schedule = [
       {
         time: "5:30 – 7:00 PM",
         title: "Lead Styling (with recording)",
-        detail:
-          "With Angel, sold separately. Being in the recording is optional, so you can choose not to participate.",
+        detail: "With Angel, sold separately",
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
@@ -139,6 +138,12 @@ export const videos = [
   { id: "UQTLO8RvVEA", title: "Angel – Baila Conmigo", thumbnail: "angel-baila-conmigo" },
   { id: "htHLC4M5Bq8", title: "Jonny & Sami", thumbnail: "jonny-and-sami" },
 ] as const;
+
+// Artist Instagram profiles linked from the About section.
+export const instagram = {
+  angel: "https://www.instagram.com/angel_garcia_bachata/",
+  luisYAndrea: "https://www.instagram.com/luisyandreaoficial/",
+};
 
 // House rules for every class and social, shown in the Code of Conduct section.
 export const codeOfConduct = [

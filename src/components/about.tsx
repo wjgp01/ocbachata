@@ -1,7 +1,7 @@
 import type { ComponentType, SVGProps } from "react";
 import { Calendar, MapPin, Users } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
-import { event } from "@/content/event";
+import { event, instagram } from "@/content/event";
 
 const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; value: string }[] = [
   { icon: Calendar, label: "Dates", value: event.dates },
@@ -20,7 +20,25 @@ export function About() {
               Get ready for an unforgettable weekend of Bachata, world-class training, and social dancing! We’re
               bringing together international artists <strong className="text-sand">Angel &amp; Luna from Spain</strong> and local
               favorites <strong className="text-sand">Jonny &amp; Sami</strong> for an exciting weekend dedicated to
-              learning, growing, and connecting through dance.
+              learning, growing, and connecting through dance.{" "}
+              <a
+                href={instagram.angel}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun"
+              >
+                Angel Garcia
+              </a>{" "}
+              is the younger brother of Luis Garcia from{" "}
+              <a
+                href={instagram.luisYAndrea}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-sand underline decoration-sun/60 underline-offset-4 hover:text-sun"
+              >
+                Luis y Andrea
+              </a>
+              .
             </p>
             <p>
               Whether you’re looking to sharpen your technique, elevate your musicality, improve your styling, or simply
