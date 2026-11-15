@@ -1,5 +1,5 @@
 // Every event detail shown on the site lives in this file.
-// Update dates, prices, venues, or videos here and the whole page follows.
+// Update dates, venues, or videos here and the whole page follows. Pass prices come live from Gomry (src/lib/gomry.ts).
 
 export const event = {
   name: "OC Bachata Weekender",
@@ -106,11 +106,9 @@ export const schedule = [
   },
 ];
 
-// Mirrors the Full Pass on Gomry, so update it whenever Gomry's price or tier changes.
+// The price and tier on the Full Pass card come live from Gomry; `name` must match the pass name there.
 export const fullPass = {
   name: "Full Pass",
-  price: 165,
-  label: "Early-Bird",
   includes: [
     {
       title: "5 hours of training",

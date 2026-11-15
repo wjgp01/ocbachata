@@ -4,8 +4,11 @@ import { GomryCheckout } from "@/components/gomry-checkout";
 import { PresaleNotice } from "@/components/presale-notice";
 import { SectionHeading } from "@/components/section-heading";
 import { fullPass, tickets } from "@/content/event";
+import { getFullPassPrice } from "@/lib/gomry";
 
-export function Tickets() {
+export async function Tickets() {
+  const pass = await getFullPassPrice();
+
   return (
     <section id="tickets" className="py-20 sm:py-28">
       <div className="wrap">
@@ -30,12 +33,20 @@ export function Tickets() {
                 </p>
                 <h3 className="mt-3 font-display text-6xl font-black uppercase italic leading-none">{fullPass.name}</h3>
               </div>
-              <p className="sm:text-right">
-                <span className="font-display text-7xl font-black italic leading-none">${fullPass.price}</span>
-                <span className="mt-1 block text-xs font-bold uppercase tracking-[0.2em] text-sand/70">
-                  {fullPass.label}
-                </span>
-              </p>
+              {pass ? (
+                <p className="sm:text-right">
+                  <span className="font-display text-7xl font-black italic leading-none">${pass.price}</span>
+                  {pass.label ? (
+                    <span className="mt-1 block text-xs font-bold uppercase tracking-[0.2em] text-sand/70">
+                      {pass.label}
+                    </span>
+                  ) : null}
+                </p>
+              ) : (
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sand/70 sm:text-right">
+                  Price shown at checkout
+                </p>
+              )}
             </div>
 
             <div aria-hidden="true" className="relative -mx-6 my-7 sm:-mx-8">

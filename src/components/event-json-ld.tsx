@@ -1,9 +1,11 @@
 import flyer from "@/assets/images/oc-bachata-weekender-flyer.jpg";
-import { event, fullPass, tickets, venues } from "@/content/event";
+import { event, tickets, venues } from "@/content/event";
+import { getGomryOffers } from "@/lib/gomry";
 import { siteUrl } from "@/lib/site";
 
 // Structured data so search engines can show the event with dates, venues and prices.
-export function EventJsonLd() {
+export async function EventJsonLd() {
+  const offers = await getGomryOffers();
   const data = {
     "@context": "https://schema.org",
     "@type": "DanceEvent",
@@ -31,14 +33,14 @@ export function EventJsonLd() {
       { "@type": "PerformingGroup", name: "Jonny & Sami" },
     ],
     organizer: { "@type": "Organization", name: "OC Bachata", url: siteUrl },
-    offers: {
+    offers: offers?.map((offer) => ({
       "@type": "Offer",
-      name: fullPass.name,
-      price: fullPass.price,
-      priceCurrency: "USD",
+      name: offer.name,
+      price: offer.price,
+      priceCurrency: offer.currency,
       url: tickets.url,
-      availability: "https://schema.org/InStock",
-    },
+      availability: offer.availability,
+    })),
   };
 
   return (
