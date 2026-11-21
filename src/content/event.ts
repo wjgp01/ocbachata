@@ -62,7 +62,7 @@ export const schedule = [
         venue: "Dance Precision’s Dance Studio, Anaheim",
       },
       {
-        time: "9:00 PM – 1:00 AM",
+        time: "9:00 PM – 2:00 AM",
         title: "Saturday Night Social",
         detail:
           "Where Zoukchata used to be, featuring DJ Jassy & DJ Zoukchatero. Full Pass holders get priority dancing with the instructors.",
