@@ -5,7 +5,7 @@ import leadStyling from "@/assets/images/videos/lead-styling-angel-garcia.jpg";
 import lunaWithFrancis from "@/assets/images/videos/luna-with-francis.jpg";
 import { SectionHeading } from "@/components/section-heading";
 import { YouTubeLite } from "@/components/youtube-lite";
-import { videos } from "@/content/event";
+import { videos } from "@/content/weekender-2026";
 
 const thumbnails: Record<(typeof videos)[number]["thumbnail"], StaticImageData> = {
   "lead-styling-angel-garcia": leadStyling,

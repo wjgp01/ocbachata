@@ -3,9 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
-  // The social preview image reads its flyer and fonts from disk; ship them with that route.
+  // The social preview images read the logo, flyer and fonts from disk; ship them with those routes.
   outputFileTracingIncludes: {
     "/opengraph-image": ["./src/assets/**/*"],
+    "/past-events/oc-bachata-weekender-2026/opengraph-image": ["./src/assets/**/*"],
   },
   turbopack: {
     rules: {

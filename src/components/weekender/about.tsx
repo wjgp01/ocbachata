@@ -1,7 +1,7 @@
 import type { ComponentType, ReactNode, SVGProps } from "react";
 import { Calendar, MapPin, Users } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
-import { event, instagram } from "@/content/event";
+import { event, instagram } from "@/content/weekender-2026";
 
 const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; value: string }[] = [
   { icon: Calendar, label: "Dates", value: event.dates },
@@ -28,17 +28,17 @@ export function About() {
     <section id="about" className="py-20 sm:py-28">
       <div className="wrap grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
-          <SectionHeading eyebrow="Welcome" title={event.tagline} />
+          <SectionHeading eyebrow="About the event" title={event.tagline} />
           <div className="reveal mt-7 space-y-5 text-lg/relaxed text-pretty text-sand/75">
             <p>
-              Get ready for an unforgettable weekend of Bachata, world-class training, and social dancing! We’re
-              bringing together international artists{" "}
+              Our grand opening was an unforgettable weekend of Bachata, world-class training, and social dancing! We
+              brought together international artists{" "}
               <strong className="text-sand">
                 <Profile href={instagram.angel}>Angel</Profile> &amp; <Profile href={instagram.luna}>Luna</Profile> from
                 Spain
               </strong>{" "}
-              and local favorites <strong className="text-sand">Jonny &amp; Sami</strong> for an exciting weekend
-              dedicated to learning, growing, and connecting through dance. Angel Garcia is the younger brother of Luis
+              and local favorites <strong className="text-sand">Jonny &amp; Sami</strong> for a weekend dedicated to
+              learning, growing, and connecting through dance. Angel Garcia is the younger brother of Luis
               Garcia from{" "}
               <strong className="text-sand">
                 <Profile href={instagram.luisYAndrea}>Luis y Andrea</Profile>
@@ -46,9 +46,8 @@ export function About() {
               .
             </p>
             <p>
-              Whether you’re looking to sharpen your technique, elevate your musicality, improve your styling, or simply
-              immerse yourself in the Bachata community, this is your chance to train with amazing artists and take your
-              dancing to the next level!
+              Thank you to everyone who came to sharpen their technique, elevate their musicality, improve their
+              styling, or simply immerse themselves in the Bachata community. See you at the next one!
             </p>
           </div>
         </div>

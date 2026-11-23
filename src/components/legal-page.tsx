@@ -22,8 +22,8 @@ export function LegalPage({ title, updated, children }: { title: string; updated
 
           <div className="legal-copy mt-12 text-pretty">{children}</div>
 
-          <Link href="/#tickets" className="btn btn-primary mt-14">
-            Back to passes
+          <Link href="/" className="btn btn-primary mt-14">
+            Back to home
             <ArrowRight className="size-5" />
           </Link>
         </article>

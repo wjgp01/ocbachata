@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
-import { contactEmail } from "@/content/event";
+import { contactEmail } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Refund Policy",

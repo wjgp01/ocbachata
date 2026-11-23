@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { ArrowUpRight } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
-import { codeOfConduct, contactEmail, lostAndFoundUrl, safetyReportUrl } from "@/content/event";
+import { codeOfConduct, contactEmail, lostAndFoundUrl, safetyReportUrl } from "@/content/site";
 
 export function CodeOfConduct() {
   return (
     <section id="code-of-conduct" className="py-20 sm:py-28">
       <div className="wrap">
         <SectionHeading eyebrow="Code of conduct" title="Dance with respect">
-          OC Bachata is for everyone. Follow these at every class and social so the whole weekend stays safe, welcoming
-          and fun.
+          OC Bachata is for everyone. Follow these at every class and social so every event stays safe, welcoming and
+          fun.
         </SectionHeading>
 
         <ol className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

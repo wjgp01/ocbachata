@@ -1,6 +1,6 @@
 import { ArrowUpRight, MapPin } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
-import { schedule, venues } from "@/content/event";
+import { schedule, venues } from "@/content/weekender-2026";
 
 export function Schedule() {
   return (

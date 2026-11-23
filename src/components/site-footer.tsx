@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/oc-bachata-logo.png";
-import { footerLinks, legalLinks, venues } from "@/content/event";
+import { ArrowUpRight } from "@/components/icons";
+import { contactEmail, footerLinks, legalLinks, lostAndFoundUrl, safetyReportUrl } from "@/content/site";
+
+const contactLinks = [
+  { label: "Community safety report", href: safetyReportUrl },
+  { label: "Lost and found", href: lostAndFoundUrl },
+];
 
 export function SiteFooter() {
   return (
@@ -9,11 +15,11 @@ export function SiteFooter() {
       <div className="wrap grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-5">
           <Link href="/" className="inline-block">
-            <Image src={logo} alt="OC Bachata Weekender home" className="h-20 w-auto" sizes="160px" />
+            <Image src={logo} alt="OC Bachata home" className="h-20 w-auto" sizes="160px" />
           </Link>
           <p className="mt-5 max-w-xs text-sand/70">Workshops · Socials · Top Artists · Great Vibes</p>
-          <Link href="/#tickets" className="btn btn-primary mt-6">
-            Get your pass
+          <Link href="/past-events" className="btn btn-primary mt-6">
+            See past events
           </Link>
         </div>
 
@@ -31,21 +37,24 @@ export function SiteFooter() {
         </nav>
 
         <div className="md:col-span-3">
-          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-sun">Venues</h2>
-          <ul className="mt-5 space-y-4 text-sand/75">
-            {venues.map((venue) => (
-              <li key={venue.name}>
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-sun">Contact</h2>
+          <ul className="mt-5 space-y-3 text-sand/75">
+            <li>
+              <a href={`mailto:${contactEmail}`} className="font-semibold text-sand transition hover:text-sun">
+                {contactEmail}
+              </a>
+            </li>
+            {contactLinks.map((link) => (
+              <li key={link.href}>
                 <a
-                  href={venue.mapsUrl}
+                  href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-sand transition hover:text-sun"
+                  className="inline-flex items-center gap-1 transition hover:text-sand"
                 >
-                  {venue.name}
+                  {link.label}
+                  <ArrowUpRight className="size-3.5" />
                 </a>
-                <p className="mt-0.5 text-sm">
-                  {venue.address.street}, {venue.address.city}
-                </p>
               </li>
             ))}
           </ul>
@@ -53,7 +62,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="wrap flex flex-col gap-3 py-6 pb-28 text-xs text-sand/50 sm:flex-row sm:items-center sm:justify-between md:pb-6">
+        <div className="wrap flex flex-col gap-3 py-6 text-xs text-sand/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 OC Bachata. All rights reserved.</p>
           <nav aria-label="Policies">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">

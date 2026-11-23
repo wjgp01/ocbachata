@@ -1,9 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import flyer from "@/assets/images/oc-bachata-weekender-flyer.jpg";
-import { Countdown } from "@/components/countdown";
-import { ArrowRight, Calendar, Clock, Download, MapPin, Play, Sparkle } from "@/components/icons";
-import { PresaleNotice } from "@/components/presale-notice";
-import { event, tickets } from "@/content/event";
+import { ArrowRight, Calendar, Download, MapPin, Play, Sparkle } from "@/components/icons";
+import { event } from "@/content/weekender-2026";
 
 export function Hero() {
   return (
@@ -18,9 +17,16 @@ export function Hero() {
 
       <div className="wrap grid items-center gap-14 pb-20 pt-28 lg:min-h-[min(100svh,1000px)] lg:grid-cols-12 lg:gap-10 lg:pb-32 lg:pt-32">
         <div className="lg:col-span-7">
+          <Link
+            href="/past-events"
+            className="mb-5 flex w-fit items-center gap-2 text-sm font-semibold text-sand/70 transition hover:text-sun"
+          >
+            <ArrowRight className="size-4 rotate-180" />
+            All past events
+          </Link>
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-sun backdrop-blur-md">
             <Sparkle className="size-3.5" />
-            {event.tagline}
+            Past event · {event.tagline}
           </p>
 
           <h1 className="mt-6 font-display font-black uppercase leading-[0.8] tracking-tight">
@@ -33,9 +39,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg/relaxed text-pretty text-sand/85 sm:text-xl/relaxed">
-            A weekend of Bachata, world-class training, and social dancing with{" "}
+            Thank you for an unforgettable weekend of Bachata, world-class training, and social dancing with{" "}
             <strong className="text-sand">Angel &amp; Luna</strong> from Spain and local favorites{" "}
-            <strong className="text-sand">Jonny &amp; Sami</strong>.
+            <strong className="text-sand">Jonny &amp; Sami</strong>!
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-sand/90 sm:text-base">
@@ -50,24 +56,15 @@ export function Hero() {
           </ul>
 
           <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#tickets" className="btn btn-primary">
-              Get your pass
-              <ArrowRight className="size-5" />
-            </a>
-            <a href="#videos" className="btn btn-ghost">
+            <a href="#videos" className="btn btn-primary">
               <Play className="size-4" />
               Watch the artists
             </a>
+            <a href="#schedule" className="btn btn-ghost">
+              See the schedule
+              <ArrowRight className="size-5" />
+            </a>
           </div>
-
-          <PresaleNotice>
-            <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-sun/15 px-3.5 py-1.5 text-sm font-bold text-sun ring-1 ring-sun/30">
-              <Clock className="size-4" />
-              Pre-sale ends {tickets.presaleEnds}
-            </p>
-          </PresaleNotice>
-
-          <Countdown className="mt-9" startsAt={event.startsAt} endsAt={event.endsAt} />
         </div>
 
         <div className="lg:col-span-5">

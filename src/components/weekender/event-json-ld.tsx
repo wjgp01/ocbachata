@@ -1,15 +1,15 @@
 import flyer from "@/assets/images/oc-bachata-weekender-flyer.jpg";
-import { event, tickets, venues } from "@/content/event";
-import { getGomryOffers } from "@/lib/gomry";
+import { site } from "@/content/site";
+import { event, venues } from "@/content/weekender-2026";
 import { siteUrl } from "@/lib/site";
 
-// Structured data so search engines can show the event with dates, venues and prices.
-export async function EventJsonLd() {
-  const offers = await getGomryOffers();
+// Structured data so search engines can show the event with its dates and venues.
+export function EventJsonLd({ path }: { path: string }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "DanceEvent",
     name: event.name,
+    url: new URL(path, siteUrl).toString(),
     description: event.description,
     startDate: event.startsAt,
     endDate: event.endsAt,
@@ -32,15 +32,7 @@ export async function EventJsonLd() {
       { "@type": "PerformingGroup", name: "Angel & Luna" },
       { "@type": "PerformingGroup", name: "Jonny & Sami" },
     ],
-    organizer: { "@type": "Organization", name: "OC Bachata", url: siteUrl },
-    offers: offers?.map((offer) => ({
-      "@type": "Offer",
-      name: offer.name,
-      price: offer.price,
-      priceCurrency: offer.currency,
-      url: tickets.url,
-      availability: offer.availability,
-    })),
+    organizer: { "@type": "Organization", name: site.name, url: siteUrl },
   };
 
   return (

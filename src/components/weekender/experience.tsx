@@ -59,7 +59,7 @@ export function Experience() {
   return (
     <section id="experience" className="py-20 sm:py-28">
       <div className="wrap">
-        <SectionHeading eyebrow="What to expect" title="Come train. Level up. Connect.">
+        <SectionHeading eyebrow="The experience" title="Come train. Level up. Connect.">
           World-class instruction from international and local artists, five hours of training, and two nights of
           dancing.
         </SectionHeading>
@@ -70,7 +70,7 @@ export function Experience() {
             alt="Angel and Luna"
             eyebrow="🇪🇸 International Artists"
             title="Angel & Luna"
-            text="Train with Angel & Luna from Spain."
+            text="Workshops and masterclasses with Angel & Luna from Spain."
             className="lg:row-span-2"
           />
           <PhotoCard
@@ -78,7 +78,7 @@ export function Experience() {
             alt="Jonny and Sami"
             eyebrow="🇺🇸 Local Artists"
             title="Jonny & Sami"
-            text="Learn and dance with Jonny & Sami."
+            text="A Saturday workshop with Jonny & Sami."
             className="lg:row-span-2"
           />
           <PhotoCard

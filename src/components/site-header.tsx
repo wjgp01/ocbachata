@@ -2,16 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useSyncExternalStore } from "react";
 import logo from "@/assets/images/oc-bachata-logo.png";
 import { Close, Menu } from "@/components/icons";
-
-const nav = [
-  { href: "/#experience", label: "Experience" },
-  { href: "/#schedule", label: "Schedule" },
-  { href: "/#tickets", label: "Passes" },
-  { href: "/#videos", label: "Videos" },
-];
+import { navLinks } from "@/content/site";
 
 function subscribeToScroll(onChange: () => void) {
   window.addEventListener("scroll", onChange, { passive: true });
@@ -26,6 +21,9 @@ export function SiteHeader() {
     () => false,
   );
   const solid = scrolled || menuOpen;
+  const pathname = usePathname();
+  // Page tabs (not section links) stay highlighted on their page and the pages under it.
+  const isCurrent = (href: string) => !href.includes("#") && (pathname === href || pathname.startsWith(`${href}/`));
 
   return (
     <header
@@ -40,10 +38,10 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="wrap flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Link href="/#top" className="shrink-0">
+        <Link href="/" className="shrink-0">
           <Image
             src={logo}
-            alt="OC Bachata Weekender"
+            alt="OC Bachata home"
             loading="eager"
             sizes="112px"
             className="h-11 w-auto lg:h-14"
@@ -52,9 +50,13 @@ export function SiteHeader() {
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-8 text-sm font-semibold text-sand/80">
-            {nav.map((item) => (
+            {navLinks.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="transition hover:text-sun">
+                <Link
+                  href={item.href}
+                  aria-current={isCurrent(item.href) ? "page" : undefined}
+                  className="transition hover:text-sun aria-[current=page]:text-sun"
+                >
                   {item.label}
                 </Link>
               </li>
@@ -63,8 +65,8 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/#tickets" className="btn btn-primary px-5 py-2.5 text-sm">
-            Get tickets
+          <Link href="/#contact" className="btn btn-primary px-5 py-2.5 text-sm">
+            Contact us
           </Link>
           <button
             type="button"
@@ -82,12 +84,13 @@ export function SiteHeader() {
       {menuOpen ? (
         <nav id="mobile-menu" aria-label="Mobile" className="border-t border-white/10 md:hidden">
           <ul className="wrap space-y-1 py-4">
-            {nav.map((item) => (
+            {navLinks.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-2xl px-3 py-3 font-display text-3xl font-black uppercase italic hover:bg-white/5"
+                  aria-current={isCurrent(item.href) ? "page" : undefined}
+                  className="block rounded-2xl px-3 py-3 font-display text-3xl font-black uppercase italic hover:bg-white/5 aria-[current=page]:text-sun"
                 >
                   {item.label}
                 </Link>

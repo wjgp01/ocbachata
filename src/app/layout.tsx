@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Sofia_Sans, Sofia_Sans_Extra_Condensed } from "next/font/google";
-import { event } from "@/content/event";
-import { siteUrl } from "@/lib/site";
+import { site } from "@/content/site";
+import { openGraph, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const sofiaSans = Sofia_Sans({
@@ -15,25 +15,13 @@ const sofiaSansExtraCondensed = Sofia_Sans_Extra_Condensed({
   style: ["normal", "italic"],
 });
 
-const title = "OC Bachata Weekender · Angel & Luna · Nov 21–22, 2026";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: title, template: `%s · ${event.name}` },
-  description: event.description,
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    siteName: event.name,
-    title,
-    description: event.description,
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description: event.description,
-  },
+  title: { default: site.title, template: `%s · ${site.name}` },
+  description: site.description,
+  openGraph: openGraph(site.title, site.description, "/"),
+  // Without its own title and description, X falls back to each page's Open Graph tags.
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
