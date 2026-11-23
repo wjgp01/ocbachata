@@ -7,7 +7,7 @@ export function CodeOfConduct() {
   return (
     <section id="code-of-conduct" className="py-20 sm:py-28">
       <div className="wrap">
-        <SectionHeading eyebrow="Code of conduct" title="Dance with respect">
+        <SectionHeading eyebrow="Our community" title="Code of conduct">
           OC Bachata is for everyone. Follow these at every class and social so every event stays safe, welcoming and
           fun.
         </SectionHeading>
