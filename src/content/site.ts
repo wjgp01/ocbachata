@@ -69,6 +69,9 @@ export const safetyReportUrl =
 // Google Form for lost items, linked from the Code of Conduct section.
 export const lostAndFoundUrl = "https://forms.gle/DQyK3iaU2snFA9bk9";
 
+// Google Form asking the community what they want at the next event, linked from the Upcoming section.
+export const nextEventSurveyUrl = "https://forms.gle/DtzTDHVVJ3Yuge6a7";
+
 export const legalLinks = [
   { label: "Terms and Conditions", href: "/terms-and-conditions" },
   { label: "Refund Policy", href: "/refund-policy" },
