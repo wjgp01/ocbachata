@@ -3,7 +3,6 @@ import { ClosingCta } from "@/components/closing-cta";
 import { Marquee } from "@/components/marquee";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { About } from "@/components/weekender/about";
 import { EventJsonLd } from "@/components/weekender/event-json-ld";
 import { Experience } from "@/components/weekender/experience";
 import { Hero } from "@/components/weekender/hero";
@@ -29,7 +28,6 @@ export default function WeekenderPage() {
       <main id="main">
         <Hero />
         <Marquee items={["Workshops", "Socials", "Top Artists", "Great Vibes"]} />
-        <About />
         <Experience />
         <Schedule />
         <Videos />
