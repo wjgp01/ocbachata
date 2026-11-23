@@ -4,9 +4,9 @@ import { SectionHeading } from "@/components/section-heading";
 import { site } from "@/content/site";
 
 const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; value: string }[] = [
-  { icon: MapPin, label: "Based in", value: site.region },
+  { icon: MapPin, label: "Based in", value: site.basedIn },
   { icon: Sparkle, label: "What we do", value: "Workshops, masterclasses & socials" },
-  { icon: Calendar, label: "Grand opening", value: "November 21–22, 2026" },
+  { icon: Calendar, label: "Since", value: "November 2026" },
 ];
 
 export function HomeAbout() {

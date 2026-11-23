@@ -4,6 +4,7 @@
 export const site = {
   name: "OC Bachata",
   region: "Orange County, California",
+  basedIn: "Orange County, Los Angeles & San Diego",
   title: "OC Bachata · Bachata workshops & socials in Orange County",
   description:
     "OC Bachata brings world-class Bachata workshops, masterclasses and socials to Orange County, California. See what’s next, relive our past events and read our code of conduct.",
@@ -11,15 +12,16 @@ export const site = {
 
 // Tabs in the header.
 export const navLinks = [
-  { href: "/#about", label: "About" },
+  { href: "/#about", label: "About Us" },
   { href: "/past-events", label: "Past Events" },
   { href: "/#code-of-conduct", label: "Code of Conduct" },
 ];
 
 export const footerLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
+  { label: "About Us", href: "/#about" },
   { label: "Past Events", href: "/past-events" },
+  { label: "Artists & Teachers", href: "/#artists" },
   { label: "Code of Conduct", href: "/#code-of-conduct" },
   { label: "Contact", href: "/#contact" },
 ];

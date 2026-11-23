@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ClosingCta } from "@/components/closing-cta";
 import { CodeOfConduct } from "@/components/code-of-conduct";
 import { HomeAbout } from "@/components/home/about";
+import { Artists } from "@/components/home/artists";
 import { HomeHero } from "@/components/home/hero";
 import { PastEventsPreview } from "@/components/home/past-events-preview";
 import { Upcoming } from "@/components/home/upcoming";
@@ -23,6 +24,7 @@ export default function Home() {
         <HomeAbout />
         <Upcoming />
         <PastEventsPreview />
+        <Artists />
         <CodeOfConduct />
         <ClosingCta />
       </main>

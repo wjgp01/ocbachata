@@ -10,7 +10,7 @@ export function PastEventsPreview() {
     <section id="past-events" className="py-20 sm:py-28">
       <div className="wrap">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading eyebrow="Past events" title="Where we’ve danced" />
+          <SectionHeading eyebrow="Our events" title="Past events" />
           <Link href="/past-events" className="reveal btn btn-ghost">
             All past events
             <ArrowRight className="size-5" />
