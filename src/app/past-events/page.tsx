@@ -28,13 +28,13 @@ export default function PastEventsPage() {
             Past events
           </h1>
           <p className="mt-5 text-lg/relaxed text-pretty text-sand/70">
-            Every OC Bachata event so far. Open one to see its lineup, schedule and videos.
+            Every OC Bachata event so far.
           </p>
         </header>
 
-        <div className="mt-14 space-y-6">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pastEvents.map((event) => (
-            <PastEventCard key={event.href} event={event} />
+            <PastEventCard key={event.name} event={event} />
           ))}
         </div>
       </main>

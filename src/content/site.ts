@@ -1,5 +1,5 @@
 // OC Bachata itself: who we are, how to reach us and the house rules. Shown on every page.
-// Each event's own details live in its own file, e.g. weekender-2026.ts.
+// Past events live in past-events.ts.
 
 export const site = {
   name: "OC Bachata",

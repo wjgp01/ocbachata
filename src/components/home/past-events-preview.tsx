@@ -16,9 +16,9 @@ export function PastEventsPreview() {
             <ArrowRight className="size-5" />
           </Link>
         </div>
-        <div className="mt-14 space-y-6">
-          {pastEvents.slice(0, 2).map((event) => (
-            <PastEventCard key={event.href} event={event} />
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {pastEvents.slice(0, 3).map((event) => (
+            <PastEventCard key={event.name} event={event} />
           ))}
         </div>
       </div>
