@@ -20,7 +20,7 @@ export function Artists() {
     <section id="artists" className="py-20 sm:py-28">
       <div className="wrap grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
         <div className="lg:col-span-6">
-          <SectionHeading eyebrow="Artists & teachers" title="Teach with us">
+          <SectionHeading eyebrow="Artists & teachers" title="Work with us">
             Are you an instructor, performer or DJ? We’re always looking for artists to hire for our workshops,
             masterclasses and socials. Tell us about yourself and we’ll be in touch.
           </SectionHeading>

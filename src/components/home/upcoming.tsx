@@ -1,7 +1,5 @@
-import { ArrowRight, ArrowUpRight } from "@/components/icons";
-import { contactEmail, nextEventSurveyUrl } from "@/content/site";
-
-const notifyHref = `mailto:${contactEmail}?subject=${encodeURIComponent("Tell me about the next OC Bachata event")}`;
+import { ArrowUpRight } from "@/components/icons";
+import { nextEventSurveyUrl } from "@/content/site";
 
 // Shown while nothing is announced yet; swap in the next event's details once it's on sale.
 export function Upcoming() {
@@ -20,19 +18,18 @@ export function Upcoming() {
             </h2>
             <p className="mt-4 text-lg/relaxed text-pretty text-sand/80">
               We’re planning our next weekend of workshops and socials. Tell us what you’d like to see in our quick
-              form. Want to hear about it first? Email us and we’ll let you know as soon as it’s announced.
+              form.
             </p>
           </div>
-          <div className="relative mt-8 flex shrink-0 flex-wrap gap-3 lg:mt-0 lg:flex-col">
-            <a href={nextEventSurveyUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Share your ideas
-              <ArrowUpRight className="size-5" />
-            </a>
-            <a href={notifyHref} className="btn btn-ghost">
-              Get notified
-              <ArrowRight className="size-5" />
-            </a>
-          </div>
+          <a
+            href={nextEventSurveyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary relative mt-8 shrink-0 lg:mt-0"
+          >
+            Share your ideas
+            <ArrowUpRight className="size-5" />
+          </a>
         </div>
       </div>
     </section>
