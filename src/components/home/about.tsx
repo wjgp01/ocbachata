@@ -9,6 +9,28 @@ const facts: { icon: ComponentType<SVGProps<SVGSVGElement>>; label: string; valu
   { icon: Calendar, label: "Since", value: "November 2026" },
 ];
 
+const purpose = [
+  {
+    label: "Our mission",
+    text: "To become a community of dancers who train, grow, and stay relevant with the latest Bachata moves.",
+  },
+  {
+    label: "Our vision",
+    text: "An academy with rotating resident instructors, inspirational talent, and continuous learning.",
+  },
+];
+
+const values = [
+  "Continuous Growth",
+  "Passion for Dance",
+  "Community",
+  "Innovation",
+  "Quality Education",
+  "Respect",
+  "Inclusivity",
+  "Discipline & Dedication",
+];
+
 export function HomeAbout() {
   return (
     <section id="about" className="py-20 sm:py-28">
@@ -40,6 +62,35 @@ export function HomeAbout() {
             </div>
           ))}
         </dl>
+      </div>
+
+      <div className="wrap mt-16 grid gap-4 lg:grid-cols-2">
+        {purpose.map(({ label, text }) => (
+          <div key={label} className="reveal glass rounded-3xl p-6 sm:p-8">
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-sun">{label}</h3>
+            <p className="mt-4 text-2xl font-bold leading-snug text-pretty">{text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="wrap mt-16">
+        <h3 className="reveal font-display text-4xl font-black uppercase italic leading-none tracking-tight sm:text-5xl">
+          Our values
+        </h3>
+        <ol className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {values.map((value, index) => (
+            <li key={value} className="reveal glass rounded-3xl p-5 sm:p-6">
+              <span className="text-gradient-sunset inline-block pr-1 font-display text-4xl font-black italic leading-none">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <p className="mt-3 text-lg font-bold leading-snug">{value}</p>
+            </li>
+          ))}
+        </ol>
+
+        <p className="reveal mt-16 text-center font-display text-3xl font-black uppercase italic leading-tight text-balance sm:text-4xl lg:text-5xl">
+          <span className="text-gradient-sunset pr-1">Train with purpose. Dance with passion. Grow with us.</span>
+        </p>
       </div>
     </section>
   );
